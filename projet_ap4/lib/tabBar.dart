@@ -29,42 +29,54 @@ class _TabBarPageState extends State<TabBarPage> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(color: Colors.white, boxShadow: [
-          BoxShadow(blurRadius: 20, color: Colors.black.withOpacity(.1))
-        ]),
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 41, 41, 41),
+          boxShadow: [
+            BoxShadow(blurRadius: 20, color: Colors.black.withOpacity(.1)),
+          ],
+        ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
           child: GNav(
-              gap: 8,
-              activeColor: Colors.white,
-              iconSize: 24,
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-              duration: const Duration(milliseconds: 800),
-              tabBackgroundColor: Colors.grey[800]!,
-              tabs: [
-                GButton(
-                  icon: Icons.home,
-                  text: 'Home',
-                ),
-                GButton(
-                  icon: Icons.search,
-                  text: 'Search',
-                ),
-                GButton(
-                  icon: Icons.favorite,
-                  text: 'Likes',
-                ),
-                GButton(
-                  icon: Icons.account_circle,
-                  text: 'Profile',
-                ),
-              ],
-              selectedIndex: _selectedIndex,
-              onTabChange: (index) {
-                setState(() {
-                  _selectedIndex = index;
-                });
-              }),
+            gap: 8,
+            activeColor: Colors.white,
+            iconSize: 24,
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            duration: const Duration(milliseconds: 800),
+            tabBackgroundColor: Colors.grey[800]!,
+            tabs: [
+              GButton(
+                icon: Icons.home,
+                text: 'Accueil',
+                iconColor: Colors.grey[400],
+                textStyle: TextStyle(color: Colors.white),
+              ),
+              GButton(
+                icon: Icons.store,
+                text: 'Produits',
+                iconColor: Colors.grey[400],
+                textStyle: TextStyle(color: Colors.white),
+              ),
+              GButton(
+                icon: Icons.dashboard,
+                text: 'Stock',
+                iconColor: Colors.grey[400],
+                textStyle: TextStyle(color: Colors.white),
+              ),
+              GButton(
+                icon: Icons.person,
+                text: 'Compte',
+                iconColor: Colors.grey[400],
+                textStyle: TextStyle(color: Colors.white),
+              ),
+            ],
+            selectedIndex: _selectedIndex,
+            onTabChange: (index) {
+              setState(() {
+                _selectedIndex = index;
+              });
+            },
+          ),
         ),
       ),
     );

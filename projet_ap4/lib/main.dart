@@ -36,16 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         child: Column(
           children: [
-            Container(
-              width: double.infinity,
-              height: 80,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.vertical(
-                  bottom: Radius.circular(20),
-                ),
-                color: const Color.fromARGB(255, 41, 41, 41),
-              ),
-            ),
             Expanded(
               child: TabBarPage(),
             ),

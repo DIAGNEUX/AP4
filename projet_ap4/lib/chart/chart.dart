@@ -22,34 +22,16 @@ class _LineChartSample2State extends State<LineChartSample2> {
     return Stack(
       children: <Widget>[
         AspectRatio(
-          aspectRatio: 1,
+          aspectRatio: 1.5,
           child: Padding(
               padding: const EdgeInsets.only(
-              left: 12,
+              left: 2,
               right: 2,
-              top: 24,
-              bottom: 12,
+              top: 2,
+              bottom: 2,
             ),
             child: LineChart(
               showAvg ? avgData() : mainData(),
-            ),
-          ),
-        ),
-        SizedBox(
-          width: 60,
-          height: 34,
-          child: TextButton(
-            onPressed: () {
-              setState(() {
-                showAvg = !showAvg;
-              });
-            },
-            child: Text(
-              'avg',
-              style: TextStyle(
-                fontSize: 12,
-                color: showAvg ? Colors.white.withOpacity(0.5) : Colors.white,
-              ),
             ),
           ),
         ),
@@ -61,6 +43,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
     const style = TextStyle(
       fontWeight: FontWeight.bold,
       fontSize: 16,
+      color: Color.fromARGB(255, 91, 90, 90),
     );
     Widget text;
     switch (value.toInt()) {
@@ -84,49 +67,10 @@ class _LineChartSample2State extends State<LineChartSample2> {
     );
   }
 
-  Widget leftTitleWidgets(double value, TitleMeta meta) {
-    const style = TextStyle(
-      fontWeight: FontWeight.bold,
-      fontSize: 15,
-    );
-    String text;
-    switch (value.toInt()) {
-      case 1:
-        text = '10K';
-        break;
-      case 3:
-        text = '30k';
-        break;
-      case 5:
-        text = '50k';
-        break;
-      default:
-        return Container();
-    }
-
-    return Text(text, style: style, textAlign: TextAlign.left);
-  }
-
+  
   LineChartData mainData() {
     return LineChartData(
-      gridData: FlGridData(
-        show: true,
-        drawVerticalLine: true,
-        horizontalInterval: 1,
-        verticalInterval: 1,
-        getDrawingHorizontalLine: (value) {
-          return const FlLine(
-            color:Color.fromARGB(255, 41, 41, 41) ,
-            strokeWidth: 1,
-          );
-        },
-        getDrawingVerticalLine: (value) {
-          return const FlLine(
-             color: Color.fromARGB(255, 41, 41, 41),
-            strokeWidth: 1,
-          );
-        },
-      ),
+      
       titlesData: FlTitlesData(
         show: true,
         rightTitles: const AxisTitles(
@@ -145,16 +89,11 @@ class _LineChartSample2State extends State<LineChartSample2> {
         ),
         leftTitles: AxisTitles(
           sideTitles: SideTitles(
-            showTitles: true,
+            showTitles: false,
             interval: 1,
-            getTitlesWidget: leftTitleWidgets,
             reservedSize: 42,
           ),
         ),
-      ),
-      borderData: FlBorderData(
-        show: true,
-        border: Border.all(color: const Color(0xff37434d)),
       ),
       minX: 0,
       maxX: 11,
@@ -196,24 +135,6 @@ class _LineChartSample2State extends State<LineChartSample2> {
   LineChartData avgData() {
     return LineChartData(
       lineTouchData: const LineTouchData(enabled: false),
-      gridData: FlGridData(
-        show: true,
-        drawHorizontalLine: true,
-        verticalInterval: 1,
-        horizontalInterval: 1,
-        getDrawingVerticalLine: (value) {
-          return const FlLine(
-            color: Color(0xff37434d),
-            strokeWidth: 1,
-          );
-        },
-        getDrawingHorizontalLine: (value) {
-          return const FlLine(
-            color: Color(0xff37434d),
-            strokeWidth: 1,
-          );
-        },
-      ),
       titlesData: FlTitlesData(
         show: true,
         bottomTitles: AxisTitles(
@@ -226,8 +147,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
         ),
         leftTitles: AxisTitles(
           sideTitles: SideTitles(
-            showTitles: true,
-            getTitlesWidget: leftTitleWidgets,
+            showTitles: false,
             reservedSize: 42,
             interval: 1,
           ),
@@ -269,9 +189,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
           ),
           barWidth: 5,
           isStrokeCapRound: true,
-          dotData: const FlDotData(
-            show: false,
-          ),
+          dotData: FlDotData(show: false),
           belowBarData: BarAreaData(
             show: true,
             gradient: LinearGradient(
