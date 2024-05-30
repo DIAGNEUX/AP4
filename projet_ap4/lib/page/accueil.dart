@@ -43,9 +43,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bienvenue, Alioune',style: TextStyle(color: Colors.white),),
+        title: Text(
+          'Bienvenue, Alioune',
+          style: TextStyle(color: Colors.white),
+        ),
         backgroundColor: Color.fromARGB(255, 0, 0, 0),
-        
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -82,38 +84,23 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          ShaderMask(
-                            shaderCallback: (Rect bounds) {
-                              return LinearGradient(
-                                colors: [
-                                  const Color.fromARGB(255, 233, 233, 9),
-                                  const Color.fromARGB(255, 211, 58, 2)
-                                ],
-                              ).createShader(bounds);
-                            },
-                            child: Icon(
-                              Icons.shopping_bag,
-                              color: Colors.white,
-                              size: 40,
-                            ),
+                          Icon(
+                            Icons.shopping_bag,
+                            color: Color.fromARGB(246, 246, 193, 2),
+                            size: 30,
                           ),
                           Container(
-                            padding: EdgeInsets.all(0.5),
-                            child: Text(
-                              '$articlesVendusAujourdhui',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold 
-                              )
-                            )
-                          ),
+                              padding: EdgeInsets.all(0.5),
+                              child: Text('$articlesVendusAujourdhui',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold))),
                           Text(
                             'articles vendus',
                             style: TextStyle(
                               color: Colors.white.withOpacity(0.8),
                               fontSize: 16,
-                              
                             ),
                           ),
                         ],
@@ -128,38 +115,23 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          ShaderMask(
-                            shaderCallback: (Rect bounds) {
-                              return LinearGradient(
-                                colors: [
-                                  const Color.fromARGB(255, 233, 233, 9),
-                                  const Color.fromARGB(255, 211, 58, 2)
-                                ],
-                              ).createShader(bounds);
-                            },
-                            child: Icon(
-                              Icons.inventory,
-                              color: Colors.white,
-                              size: 40,
-                            ),
+                          Icon(
+                            Icons.inventory,
+                            color: Color.fromARGB(246, 246, 193, 2),
+                            size: 30,
                           ),
                           Container(
-                            padding: EdgeInsets.all(0.5),
-                            child: Text(
-                              '$articlesEnStock',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold 
-                              )
-                            )
-                          ),
+                              padding: EdgeInsets.all(0.5),
+                              child: Text('$articlesEnStock',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold))),
                           Text(
                             'articles en stock',
                             style: TextStyle(
                               color: Colors.white.withOpacity(0.8),
                               fontSize: 16,
-                              
                             ),
                           ),
                         ],
@@ -174,38 +146,23 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          ShaderMask(
-                            shaderCallback: (Rect bounds) {
-                              return LinearGradient(
-                                colors: [
-                                  const Color.fromARGB(255, 233, 233, 9),
-                                  const Color.fromARGB(255, 211, 58, 2)
-                                ],
-                              ).createShader(bounds);
-                            },
-                            child: Icon(
-                              Icons.local_shipping,
-                              color: Colors.white,
-                              size: 40,
-                            ),
+                          Icon(
+                            Icons.local_shipping,
+                            color: Color.fromARGB(246, 246, 193, 2),
+                            size: 30,
                           ),
                           Container(
-                            padding: EdgeInsets.all(0.5),
-                            child: Text(
-                              '$commandesEnCours',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold 
-                              )
-                            )
-                          ),
+                              padding: EdgeInsets.all(0.5),
+                              child: Text('$commandesEnCours',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold))),
                           Text(
                             'commande en cours',
                             style: TextStyle(
                               color: Colors.white.withOpacity(0.8),
                               fontSize: 16,
-                              
                             ),
                           ),
                         ],
@@ -220,38 +177,23 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          ShaderMask(
-                            shaderCallback: (Rect bounds) {
-                              return LinearGradient(
-                                colors: [
-                                  const Color.fromARGB(255, 233, 233, 9),
-                                  const Color.fromARGB(255, 211, 58, 2)
-                                ],
-                              ).createShader(bounds);
-                            },
-                            child: Icon(
-                              Icons.error_outline,
-                              color: Colors.white,
-                              size: 40,
-                            ),
+                          Icon(
+                            Icons.error_outline,
+                            color: Color.fromARGB(246, 246, 193, 2),
+                            size: 30,
                           ),
                           Container(
-                            padding: EdgeInsets.all(0.5),
-                            child: Text(
-                              '$rupturesDeStock',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold 
-                              )
-                            )
-                          ),
+                              padding: EdgeInsets.all(0.5),
+                              child: Text('$rupturesDeStock',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold))),
                           Text(
                             'rupture de stock',
                             style: TextStyle(
                               color: Colors.white.withOpacity(0.8),
                               fontSize: 16,
-                              
                             ),
                           ),
                         ],
@@ -294,3 +236,7 @@ void main() {
     home: HomePage(),
   ));
 }
+
+
+
+

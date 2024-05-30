@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'page/accueil.dart';
 import 'page/produits.dart';
-import 'page/stock.dart';
+import 'page/commande.dart';
 import 'page/compte.dart';
 
 class TabBarPage extends StatefulWidget {
@@ -18,7 +18,7 @@ class _TabBarPageState extends State<TabBarPage> {
   final List<Widget> _widgetOptions = <Widget>[
     const HomePage(),
     const Produits(),
-    const Stock(),
+    const Commande(),
     const Compte(),
   ];
 
@@ -59,7 +59,7 @@ class _TabBarPageState extends State<TabBarPage> {
               ),
               GButton(
                 icon: Icons.dashboard,
-                text: 'Stock',
+                text: 'Commande',
                 iconColor: Colors.grey[400],
                 textStyle: TextStyle(color: Colors.white),
               ),

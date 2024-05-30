@@ -11,8 +11,8 @@ class LineChartSample2 extends StatefulWidget {
 
 class _LineChartSample2State extends State<LineChartSample2> {
   List<Color> gradientColors = [
-    Color.fromARGB(255, 233, 233, 9),
-    Color.fromARGB(255, 211, 58, 2),
+    const Color.fromARGB(255, 233, 233, 9),
+    const Color.fromARGB(255, 211, 58, 2),
   ];
 
   bool showAvg = false;
@@ -87,7 +87,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
             getTitlesWidget: bottomTitleWidgets,
           ),
         ),
-        leftTitles: AxisTitles(
+        leftTitles: const AxisTitles(
           sideTitles: SideTitles(
             showTitles: false,
             interval: 1,
@@ -145,7 +145,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
             interval: 1,
           ),
         ),
-        leftTitles: AxisTitles(
+        leftTitles: const AxisTitles(
           sideTitles: SideTitles(
             showTitles: false,
             reservedSize: 42,
@@ -189,7 +189,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
           ),
           barWidth: 5,
           isStrokeCapRound: true,
-          dotData: FlDotData(show: false),
+          dotData: const FlDotData(show: false),
           belowBarData: BarAreaData(
             show: true,
             gradient: LinearGradient(
